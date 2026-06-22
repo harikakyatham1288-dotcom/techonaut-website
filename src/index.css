@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap");
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+==========================================================================
+【AI HANDOVER NOTE】
+1. DESIGN PHILOSOPHY:
+   - Neo-Corporate Futurism: Merging enterprise credibility with AI-era innovation through dark, premium aesthetics and glowing technological elements
+   - Glassmorphism 2.0 with Neon Accents: Translucent surfaces with backdrop-blur combined with electric blue and vibrant orange rim-lighting to convey cutting-edge AI technology
+   - Physicality & Depth: Layered cards with ambient occlusion, subtle shadows, and glow effects create a sense of dimensional space—moving beyond flat design to communicate sophistication
+   - This style directly supports Techonaut AI's positioning as a premium, AI-first recruitment platform that balances human-centered values with technological precision
+
+2. TYPOGRAPHY:
+   - Inter (Primary Sans): Clean, highly legible geometric sans-serif perfect for corporate communication. Its neutral professionalism ensures readability across dense content (services, industries, values) while maintaining modern tech credibility
+   - Space Grotesk (Display/Headings): Geometric with subtle quirks—adds personality to hero sections and CTAs without sacrificing professionalism. Its technical feel aligns with AI/tech branding
+   - JetBrains Mono: Used sparingly for data points ("200+ data points", "48-hr delivery"), metrics dashboards, and technical specifications to reinforce precision and analytical rigor
+
+3. COLOR SYSTEM:
+   - Brand Primary (Dark Navy #0A1128 → oklch(0.12 0.04 250)): Deep, authoritative blue-black serves as the foundation—conveying trust, stability, and corporate gravitas. Low luminance creates premium dark-mode-first experience
+   - Electric Blue (#2563EB → --primary): High-energy accent representing AI innovation, technology, and forward momentum. Used for CTAs, interactive elements, and glowing effects
+   - Vibrant Orange (#F97316 → --accent): Warm counterpoint providing energy and approachability. Highlights key metrics, success stories, and human-centered messaging to balance the cool tech palette
+   - --brand maps to background/sidebar (dark navy base), --primary to interactive elements and AI-tech features, --accent to conversion points and warmth injections
+   - Semantic colors: success (green for placement metrics), warning (amber for urgency in hiring timelines), destructive (red-orange for critical alerts)
+   - Glow effects achieved through ring colors with increased chroma and strategic use of box-shadow with color-mix
+
+4. USAGE GUIDE:
+   - Layout: Full-width hero with particle network background animation, followed by alternating full-bleed sections and centered 1280px containers for content density control
+   - Glassmorphism Implementation: Use backdrop-blur-xl on card/popover with background opacity 0.05-0.1, combine with subtle border (--border with 0.1 opacity) and rim-light effect via inset box-shadow
+   - Neon Glow Pattern: Apply to icons, CTAs, and data metrics using --ring color with 0-8px blur and 0.6-0.8 opacity. Animate on hover with transition-all duration-300
+   - Particle Background: Implement via CSS custom properties with animated gradients (--background to --primary/10% to --accent/5%) using conic-gradient and background-size animation
+   - Sticky Navbar: Use backdrop-blur-md with --background/80% opacity, add subtle bottom border-b in --border, ensure z-50 stacking
+   - Scroll Animations: Leverage Intersection Observer with opacity and translateY transforms—stagger card reveals by 100ms for premium feel
+   - Contrast Compliance: All text on dark navy must use --foreground (high luminance) or --muted-foreground for secondary content. Ensure 7:1 ratio for body text, 4.5:1 for large text
+   - Special Effects: Use --chart colors for data visualization (recruitment funnel, industry distribution), apply --sidebar variants for navigation panels and side drawers
+==========================================================================
+*/
+
+:root {
+  /* Typography */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+  
+  /* Radius */
+  --radius: 0.75rem;
+
+  /* Core UI Tokens */
+  --background: oklch(0.98 0.005 250);
+  --foreground: oklch(0.15 0.02 250);
+  --card: oklch(0.99 0.003 250);
+  --card-foreground: oklch(0.15 0.02 250);
+  --popover: oklch(0.99 0.003 250);
+  --popover-foreground: oklch(0.15 0.02 250);
+  --primary: #7B2FF7;
+  --primary-foreground: #ffffff;
+  --secondary: oklch(0.93 0.01 295);
+  --secondary-foreground: oklch(0.20 0.02 295);
+  --muted: oklch(0.94 0.008 295);
+  --muted-foreground: oklch(0.48 0.015 280);
+  --accent: #FF4FD8;
+  --accent-foreground: #ffffff;
+  --destructive: oklch(0.58 0.22 25);
+  --destructive-foreground: oklch(0.98 0.005 250);
+  --border: oklch(0.88 0.012 295);
+  --input: oklch(0.88 0.012 295);
+  --ring: #7B2FF7;
+
+  /* Chart Tokens — purple · pink · violet · blue · teal */
+  --chart-1: #7B2FF7;
+  --chart-2: #FF4FD8;
+  --chart-3: #B026FF;
+  --chart-4: oklch(0.60 0.18 180);
+  --chart-5: oklch(0.58 0.17 320);
+  
+  /* Sidebar Tokens */
+  --sidebar: oklch(0.96 0.006 250);
+  --sidebar-foreground: oklch(0.20 0.02 250);
+  --sidebar-primary: oklch(0.55 0.22 250);
+  --sidebar-primary-foreground: oklch(0.98 0.005 250);
+  --sidebar-accent: oklch(0.65 0.20 35);
+  --sidebar-accent-foreground: oklch(0.98 0.005 250);
+  --sidebar-border: oklch(0.88 0.01 250);
+  --sidebar-ring: oklch(0.55 0.22 250);
+}
+
+.dark {
+  --background: #0A0617;
+  --foreground: #FFFFFF;
+  --card: #120920;
+  --card-foreground: #FFFFFF;
+  --popover: #0f0720;
+  --popover-foreground: #FFFFFF;
+  --primary: #7B2FF7;
+  --primary-foreground: #FFFFFF;
+  --secondary: #1a0f2e;
+  --secondary-foreground: #B8B8D0;
+  --muted: #1a0f2e;
+  --muted-foreground: #B8B8D0;
+  --accent: #FF4FD8;
+  --accent-foreground: #FFFFFF;
+  --destructive: oklch(0.62 0.24 25);
+  --destructive-foreground: oklch(0.95 0.008 250);
+  --border: #2d1b4e;
+  --input: #2d1b4e;
+  --ring: #7B2FF7;
+
+  /* Chart Tokens */
+  --chart-1: #7B2FF7;
+  --chart-2: #FF4FD8;
+  --chart-3: #B026FF;
+  --chart-4: #2563EB;
+  --chart-5: #FF6B35;
+
+  /* Sidebar Tokens */
+  --sidebar: oklch(0.10 0.042 250);
+  --sidebar-foreground: oklch(0.88 0.012 250);
+  --sidebar-primary: #7B2FF7;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #FF4FD8;
+  --sidebar-accent-foreground: #FFFFFF;
+  --sidebar-border: #2d1b4e;
+  --sidebar-ring: #7B2FF7;
+}
+
+@theme inline {
+  /* Shadcn Core Mapping */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Charts Mapping */
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  /* Sidebar Mapping */
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Typography */
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+
+  /* Radius */
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    @apply scroll-smooth antialiased;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans min-h-screen;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+  }
+
+  code, pre {
+    @apply font-mono;
+  }
+
+  ::selection {
+    @apply bg-primary/20 text-primary;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted-foreground/20 rounded-full hover:bg-muted-foreground/40;
+  }
+}
