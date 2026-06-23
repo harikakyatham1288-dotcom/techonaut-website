@@ -48,7 +48,7 @@ export default function Navbar() {
             <img
               src={LOGO_URL}
               alt="Techonaut AI Talent"
-              className="relative h-10 w-auto rounded-xl object-contain border border-white/10 shadow-[0_0_16px_rgba(37,99,235,0.4)] group-hover:shadow-[0_0_28px_rgba(37,99,235,0.65)] transition-all"
+              className="relative h-19 w-auto rounded-xl object-contain border border-white/10 shadow-[0_0_16px_rgba(37,99,235,0.4)] group-hover:shadow-[0_0_28px_rgba(37,99,235,0.65)] transition-all"
             />
           </div>
           <div className="hidden sm:block">

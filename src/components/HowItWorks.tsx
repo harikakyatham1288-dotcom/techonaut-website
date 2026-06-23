@@ -25,8 +25,8 @@ const steps = [
   {
     num: 3,
     title: 'Human-Verified Shortlist',
-    desc: 'Expert recruiters review every AI-selected candidate. You receive only the best 3–5 profiles within 48 hours.',
-    detail: '48-Hour Delivery · Quality Guarantee · Interview Ready',
+    desc: 'Expert recruiters review every AI-selected candidate. You receive only the best 3–5 profiles within 24 hours.',
+    detail: '24-Hour Client Response · Quality Guarantee · Interview Ready',
     color: 'primary',
     img: 'https://skyagent-artifacts.skywork.ai/router/agent/2026-06-22/prod_agent_c56c4711-609d-470f-b355-3c1db7b9cd64/human%20verfies%20icon-BusIm3GJ3RxC_6PSmTm0wYgBqp3GFAt4jPZEYmo3dVjIf_qjGcXF_ZE-t8RRFSqT8ajTcYokw469yNBrBSwsjYTQ5lWty8m6Ec58XJT0PGOS-21C8JrnhVGsFsqAeu0nXckxgyfXe4tf-BXJJgUJG9SQuNTqef0CAww9BHbuYGZJVy_4e41b25f055f4501abd6bee247585804.jpg',
     imgAlt: 'Human-verified shortlist',

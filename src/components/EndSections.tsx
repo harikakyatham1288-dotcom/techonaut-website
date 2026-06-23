@@ -320,6 +320,16 @@ export function Footer() {
                 </div>
                 +91 9177306224
               </a>
+              <div className="flex items-start gap-3 text-sm text-muted-foreground">
+  <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+    📍
+  </div>
+  <div>
+    Techonaut AI Talent Pvt Ltd
+    <br />
+    1-5-458/2/1, Road No 4, New Maruthinagar, Kothapet, Hyderabad - 500 060, Telanagana, India.
+  </div>
+</div>
               <div className="flex items-center gap-3 text-sm text-muted-foreground">
                 <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
                   <Globe className="w-3.5 h-3.5 text-primary" />

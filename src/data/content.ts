@@ -12,7 +12,7 @@ export const company = {
 }
 
 export const stats = [
-  { value: '48', unit: 'HRS', label: 'Candidate Delivery', mono: true },
+  { value: '24', unit: 'HRS', label: 'Client Response Time', mono: true },
   { value: '95%+', unit: '', label: 'Placement Success Rate', mono: true },
   { value: 'AI-First', unit: '', label: 'Built From Day One', mono: false },
   { value: '10+', unit: '', label: 'Industries Served', mono: true },
@@ -114,12 +114,17 @@ export const advantages = [
 ]
 
 export const whyUs = [
-  { icon: '⚡', title: 'Speed Without Compromise', desc: 'Qualified candidates delivered within 48 hours. Every one rigorously screened before reaching your desk.' },
+  { icon: '⚡', title: '24 Hr Client Response', desc: 'Client response within 24 hours.' },
+
   { icon: '💎', title: 'Cost-Effective Solutions', desc: 'Enterprise-grade recruitment capabilities at a fraction of the cost. RPO models for every stage.' },
+
   { icon: '🤝', title: 'Dedicated Account Management', desc: 'Specialist recruiters who understand your industry, culture, and long-term talent needs.' },
+
   { icon: '🎯', title: 'Precision Matching', desc: 'Our AI analyzes 200+ data points per candidate including technical skills, soft skills, and cultural alignment.' },
-  { icon: '🔒', title: 'Compliance & Data Security', desc: 'DPDP Act compliant. Your candidate data handled with the highest standards of security and confidentiality.' },
-  { icon: '📡', title: 'Transparent Reporting', desc: 'Real-time portal: pipeline status, interview feedback, offer acceptance rates — full visibility at every stage.' },
+
+  { icon: '🔒', title: 'Compliance & Data Security', desc: 'PDPD Act compliant. Your candidate data handled securely.' },
+
+  { icon: '📡', title: 'Transparent Reporting', desc: 'Real-time portal: pipeline status, interview feedback, offers.' }
 ]
 
 export const diversity = [

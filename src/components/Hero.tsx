@@ -177,8 +177,8 @@ export default function Hero() {
                 className="absolute -top-4 -left-4 lg:-left-8 flex items-center gap-2.5 px-4 py-3 bg-white rounded-2xl shadow-[0_4px_24px_rgba(0,0,0,0.12)] border border-border/60">
                 <div className="w-9 h-9 rounded-xl bg-primary/10 flex items-center justify-center text-lg">⚡</div>
                 <div>
-                  <p className="font-bold text-foreground text-sm leading-none" style={{ fontFamily: "'JetBrains Mono',monospace" }}>48 HRS</p>
-                  <p className="text-muted-foreground text-xs mt-0.5">Avg. Delivery</p>
+                  <p className="font-bold text-foreground text-sm leading-none" style={{ fontFamily: "'JetBrains Mono',monospace" }}>24 HRS</p>
+                  <p className="text-muted-foreground text-xs mt-0.5">client response</p>
                 </div>
               </motion.div>
 

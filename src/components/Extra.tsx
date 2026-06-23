@@ -132,7 +132,7 @@ export function Testimonials() {
           transition={{ duration: 0.6, delay: 0.45 }} className="flex flex-wrap justify-center gap-5 mt-12">
           {[
             { icon: '✅', label: 'Verified Only' },
-            { icon: '⚡', label: '48-hr Delivery' },
+            { icon: '⚡', label: '24-hr Client Response' },
             { icon: '🎯', label: 'AI-Powered Match' },
             { icon: '🤝', label: 'Founder-Led Service' },
             { icon: '🌍', label: 'Pan-India Reach' },
