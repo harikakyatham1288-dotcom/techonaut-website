@@ -11,14 +11,14 @@ const BS_ENVITECH_LOGO = 'https://skyagent-artifacts.skywork.ai/router/agent/202
 ───────────────────────────────────────── */
 const realStories = [
   {
-    name: 'Anil',
-    company: 'BS Envitech Pvt Ltd',
-    role: 'BS Envitech Pvt Ltd — Hyderabad',
-    industry: 'Environmental Services · Hyderabad',
-    role_closed: 'Environmental Engineer',
+    name: 'Rinitha',
+    company: 'Food Industry',
+    role: 'Safety Officer',
+    industry: 'Food Industry · Hyderabad',
+    role_closed: 'Safety Officer',
     time_to_close: '36 hours',
     rating: 5,
-    text: 'We had an urgent requirement for an Environmental Engineer and weren\'t sure how fast it could be closed. Techonaut AI delivered a shortlisted, interview-ready candidate in just 36 hours. Impressive speed, highly professional process.',
+    text: 'We had an urgent requirement for an Safety Officer and weren\'t sure how fast it could be closed. Techonaut AI delivered a shortlisted, interview-ready candidate in just 36 hours. Impressive speed, highly professional process.',
   },
 ]
 
